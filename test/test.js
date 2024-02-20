@@ -4,10 +4,10 @@
 const request = require('supertest');
 const app = require('../server');
 
-// test script for GET / route
-// the normal response should be a 200 status code and a JSON object with a message property
-// the message property should be equal to "Hello, World!"
-describe('GET /', () => {
+describe('GET & POST /', () => {
+    // test script for GET / route
+    // the normal response should be a 200 status code and a JSON object with a message property
+    // the message property should be equal to "Hello, World!"
     it('responds with a JSON object with a message property equal to "Hello, World!"', (done) => {
         request(app)
             .get('/')
