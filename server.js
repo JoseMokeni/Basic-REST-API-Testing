@@ -25,10 +25,10 @@ const PORT = process.env.PORT || 3000;
 //     res.status(200).json(data);
 // });
 
-// case 4 : Return JSON object with message property equal to "Hello, World!"
+// case 4 : Return JSON object with message property equal to "Jambo"
 app.get('/', (req, res) => {
     const data = {
-        message: 'Hello, World!'
+        message: 'Jambo'
     };
     res.status(200).json(data);
 });
@@ -44,18 +44,18 @@ app.get('/', (req, res) => {
 //     res.status(201).json({  });
 // });
 
-// case 3 : Return JSON object with message property equal to "Hello, World! (From José)"
+// case 3 : Return JSON object with message property equal to "Jambo (From José)"
 
 // app.post('/', (req, res) => {
-//     res.status(201).json({ message: 'Hello, World! (From José)' });
+//     res.status(201).json({ message: 'Jambo (From José)' });
 // });
 
-// case 4 : Return JSON object with message property equal to "Hello, World! (From José)" if the message property is equal to "Hello, World!"
+// case 4 : Return JSON object with message property equal to "Jambo (From José)" if the message property is equal to "Jambo"
 
 app.post('/', (req, res) => {
     const { message } = req.body;
-    if (message === 'Hello, World!') {
-        res.status(201).json({ message: 'Hello, World! (From José)' });
+    if (message === 'Jambo') {
+        res.status(201).json({ message: 'Jambo (From José)' });
     } else {
         res.status(400).end();
     }
